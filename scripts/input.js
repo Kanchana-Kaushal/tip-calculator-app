@@ -50,7 +50,6 @@ tipInput.addEventListener("input", () => {
             tipInput.classList.add("input-error-state");
         } else {
             inputValues.tipPercentage = inputValue;
-            tipInput.classList.remove("input-error-state");
             inputBtnClassSwap();
             displayData(inputValues);
         }
@@ -83,6 +82,7 @@ function getTextInput(elem, erroMessageElem) {
 function inputBtnClassSwap() {
     document.querySelectorAll(".js-tip-percentage").forEach((elem) => {
         elem.classList.remove("percentage-active");
+        tipInput.classList.remove("input-error-state");
     });
 }
 
