@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --color-custom-Strong-cyan: hsl(172, 67%, 45%);
+    --color-custom-cyan: hsl(183, 100%, 15%);
+    --color-custom-Dark-grayish-cyan: hsl(186, 14%, 43%);
+    --color-custom-Grayish-cyan: hsl(184, 14%, 56%);
+    --color-custom-Light-grayish-cyan: hsl(185, 41%, 84%);
+    --color-custom-Very-light-grayish-cyan: hsl(189, 41%, 97%);
+    --color-custom-White: hsl(0, 0%, 100%);
+
+    --font-space-mono: "Space Mono", serif;
+}
+
+.input-error-state {
+    @apply ring-1 ring-red-400;
+}
+
+.button-active-state {
+    @apply hover:bg-custom-Light-grayish-cyan opacity-100 transition-colors duration-75 ease-in cursor-pointer;
+}
+
+.percentage-active {
+    @apply bg-custom-Light-grayish-cyan text-custom-cyan;
+}

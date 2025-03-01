@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+
+        <title>Frontend Mentor | Tip calculator app</title>
+        <link rel="stylesheet" href="styles/styles.css" />
+    </head>
+    <body>
+        <main
+            class="font-space-mono bg-custom-Light-grayish-cyan flex min-h-screen flex-col items-center justify-center"
+        >
+            <div class="my-10">
+                <img src="./images/logo.svg" alt="splitter-logo" />
+            </div>
+            <div
+                class="w-full max-w-4xl rounded-2xl bg-white p-8 md:flex md:gap-8"
+            >
+                <div class="md:w-1/2">
+                    <div>
+                        <div
+                            class="my-1 flex items-center justify-between gap-4"
+                        >
+                            <p
+                                class="text-custom-Dark-grayish-cyan my-0.5 text-sm font-bold"
+                            >
+                                Bill
+                            </p>
+                            <p
+                                class="text-xs font-bold text-red-400 js-bill-input-error-message"
+                            ></p>
+                        </div>
+
+                        <div class="relative">
+                            <input
+                                type="text"
+                                placeholder="0"
+                                class="bg-custom-Very-light-grayish-cyan focus:ring-custom-Strong-cyan text-custom-cyan w-full rounded-md p-2 text-right text-lg font-bold outline-none focus:ring-2 js-bill-input"
+                            />
+
+                            <img
+                                src="./images/icon-dollar.svg"
+                                alt=""
+                                class="absolute left-5 top-1/2 -translate-y-1/2"
+                            />
+                        </div>
+                    </div>
+
+                    <div class="my-8">
+                        <p
+                            class="text-custom-Dark-grayish-cyan text-sm font-bold"
+                        >
+                            Select Tip %
+                        </p>
+
+                        <div class="my-3 grid grid-cols-2 gap-3">
+                            <div
+                                class="bg-custom-cyan text-custom-White hover:bg-custom-Light-grayish-cyan hover:text-custom-cyan cursor-pointer rounded-sm p-2 text-center font-semibold transition-colors duration-75 ease-in js-tip-percentage"
+                                data-percentage="5"
+                            >
+                                5%
+                            </div>
+                            <div
+                                class="bg-custom-cyan text-custom-White hover:bg-custom-Light-grayish-cyan hover:text-custom-cyan cursor-pointer rounded-sm p-2 text-center font-semibold transition-colors duration-75 ease-in js-tip-percentage"
+                                data-percentage="10"
+                            >
+                                10%
+                            </div>
+                            <div
+                                class="bg-custom-cyan text-custom-White hover:bg-custom-Light-grayish-cyan hover:text-custom-cyan cursor-pointer rounded-sm p-2 text-center font-semibold transition-colors duration-75 ease-in js-tip-percentage"
+                                data-percentage="15"
+                            >
+                                15%
+                            </div>
+                            <div
+                                class="bg-custom-cyan text-custom-White hover:bg-custom-Light-grayish-cyan hover:text-custom-cyan cursor-pointer rounded-sm p-2 text-center font-semibold transition-colors duration-75 ease-in js-tip-percentage"
+                                data-percentage="25"
+                            >
+                                25%
+                            </div>
+                            <div
+                                class="bg-custom-cyan text-custom-White hover:bg-custom-Light-grayish-cyan hover:text-custom-cyan cursor-pointer rounded-sm p-2 text-center font-semibold transition-colors duration-75 ease-in js-tip-percentage"
+                                data-percentage="50"
+                            >
+                                50%
+                            </div>
+                            <div
+                                class="bg-custom-Very-light-grayish-cyan text-custom-Dark-grayish-cyan rounded-sm text-center font-bold"
+                            >
+                                <input
+                                    type="text"
+                                    placeholder="Custom"
+                                    class="focus:ring-custom-Strong-cyan text-custom-cyan h-full w-full rounded-md px-4 text-right outline-none focus:ring-1 js-tip-input"
+                                />
+                            </div>
+                        </div>
+
+                        <div class="my-8">
+                            <div
+                                class="my-1 flex items-center justify-between gap-4"
+                            >
+                                <p
+                                    class="text-custom-Dark-grayish-cyan text-sm font-bold"
+                                >
+                                    Number of People
+                                </p>
+                                <p
+                                    class="text-xs font-bold text-red-400 js-people-input-error-message"
+                                ></p>
+                            </div>
+
+                            <div class="relative">
+                                <input
+                                    type="text"
+                                    placeholder="1"
+                                    class="bg-custom-Very-light-grayish-cyan focus:ring-custom-Strong-cyan text-custom-cyan w-full rounded-md p-2 text-right text-lg font-bold outline-none focus:ring-2 js-people-input"
+                                />
+                                <img
+                                    src="./images/icon-person.svg"
+                                    alt="icon-person"
+                                    class="absolute left-5 top-1/2 -translate-y-1/2"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="bg-custom-cyan justify-between rounded-2xl p-4 md:flex md:w-1/2 md:flex-col md:p-10 js-display-html"
+                ></div>
+            </div>
+        </main>
+
+        <script src="scripts/scripts.js" type="module"></script>
+    </body>
+</html>
