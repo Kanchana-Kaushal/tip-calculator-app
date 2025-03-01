@@ -10,6 +10,7 @@ export const inputValues = {
     people: 1,
 };
 
+//event Handler for Bill
 billInputBox.addEventListener("input", () => {
     inputValues.billAmount = getTextInput(
         billInputBox,
@@ -19,6 +20,7 @@ billInputBox.addEventListener("input", () => {
     displayData(inputValues);
 });
 
+//eventHandler for people
 peopleInputBox.addEventListener("input", () => {
     inputValues.people = getTextInput(
         peopleInputBox,
@@ -28,6 +30,7 @@ peopleInputBox.addEventListener("input", () => {
     displayData(inputValues);
 });
 
+//tip percentage input buttons
 document.querySelectorAll(".js-tip-percentage").forEach((elem) => {
     elem.addEventListener("click", () => {
         inputValues.tipPercentage = Number(elem.dataset.percentage);
@@ -37,6 +40,7 @@ document.querySelectorAll(".js-tip-percentage").forEach((elem) => {
     });
 });
 
+//tip percentage input textbox
 tipInput.addEventListener("input", () => {
     let inputValue = Number(tipInput.value);
 
@@ -54,6 +58,7 @@ tipInput.addEventListener("input", () => {
     }
 });
 
+//Handles input errors and returns input value
 function getTextInput(elem, erroMessageElem) {
     let inputValue = Number(elem.value);
     let errorElem = document.querySelector(erroMessageElem);
@@ -73,12 +78,15 @@ function getTextInput(elem, erroMessageElem) {
     }
 }
 
+//Remove active states on all buttons
 function inputBtnClassSwap() {
     document.querySelectorAll(".js-tip-percentage").forEach((elem) => {
         elem.classList.remove("percentage-active");
+        tipInput.value = "";
     });
 }
 
+//Reset Values
 export function resetInput() {
     inputValues.billAmount = 0;
     inputValues.people = 1;
@@ -86,6 +94,7 @@ export function resetInput() {
 
     billInputBox.value = "";
     peopleInputBox.value = "";
+    tipInput.value = "";
     inputBtnClassSwap();
 
     displayData(inputValues);

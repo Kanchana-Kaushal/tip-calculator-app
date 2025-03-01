@@ -1,14 +1,15 @@
-import { inputValues, resetInput } from "./input.js";
+import { resetInput } from "./input.js";
 let isResetBtnActive = false;
 
 export function displayData(inputValues) {
     const billAmount = inputValues.billAmount || 0;
-    const people = inputValues.people;
+    const people = inputValues.people || 0;
     const percentage = inputValues.tipPercentage;
     const tipValue = (billAmount / 100) * percentage;
     const tipPerPerson = tipValue / people;
     const totalPerPerson = (billAmount + tipValue) / people;
 
+    //assign true or false for "active" class swap in the reset button
     if (billAmount) {
         isResetBtnActive = true;
     } else {
