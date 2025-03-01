@@ -35,6 +35,7 @@ document.querySelectorAll(".js-tip-percentage").forEach((elem) => {
     elem.addEventListener("click", () => {
         inputValues.tipPercentage = Number(elem.dataset.percentage);
         inputBtnClassSwap();
+        tipInput.value = "";
         elem.classList.add("percentage-active");
         displayData(inputValues);
     });
@@ -82,7 +83,6 @@ function getTextInput(elem, erroMessageElem) {
 function inputBtnClassSwap() {
     document.querySelectorAll(".js-tip-percentage").forEach((elem) => {
         elem.classList.remove("percentage-active");
-        tipInput.value = "";
     });
 }
 
