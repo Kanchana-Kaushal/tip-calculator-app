@@ -3,7 +3,7 @@ let isResetBtnActive = false;
 
 export function displayData(inputValues) {
     const billAmount = inputValues.billAmount || 0;
-    const people = inputValues.people || 0;
+    const people = inputValues.people || 1;
     const percentage = inputValues.tipPercentage;
     const tipValue = (billAmount / 100) * percentage;
     const tipPerPerson = tipValue / people;
