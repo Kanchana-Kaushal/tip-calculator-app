@@ -23,7 +23,7 @@ billInputBox.addEventListener("input", () => {
 //eventHandler for people
 peopleInputBox.addEventListener("input", () => {
     inputValues.people = getTextInput(
-        peopleInputBox,
+        peopleInputBox || 1,
         ".js-people-input-error-message"
     );
 
